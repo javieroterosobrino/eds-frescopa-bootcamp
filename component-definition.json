@@ -295,6 +295,39 @@
           }
         },
         {
+          "title": "Stats",
+          "id": "stats",
+          "model": "stats",
+          "filter": "stats",
+          "plugins": {
+            "da": {
+              "rows": 1,
+              "columns": 2
+            }
+          }
+        },
+        {
+          "title": "Stat",
+          "id": "stats-item",
+          "model": "stats-item",
+          "plugins": {
+            "da": {
+              "rows": 1,
+              "columns": 2,
+              "fields": [
+                {
+                  "name": "number",
+                  "selector": "div:nth-child(1)>div"
+                },
+                {
+                  "name": "label",
+                  "selector": "div:nth-child(2)>div"
+                }
+              ]
+            }
+          }
+        },
+        {
           "title": "Table",
           "id": "table",
           "model": "table",

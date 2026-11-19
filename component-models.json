@@ -223,6 +223,46 @@
     ]
   },
   {
+    "id": "stats",
+    "fields": [
+      {
+        "component": "select",
+        "name": "classes",
+        "label": "Style",
+        "value": "",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "Dark",
+            "value": "dark"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "stats-item",
+    "fields": [
+      {
+        "component": "text",
+        "name": "number",
+        "label": "Number",
+        "valueType": "string",
+        "required": true
+      },
+      {
+        "component": "text",
+        "name": "label",
+        "label": "Label",
+        "valueType": "string",
+        "required": true
+      }
+    ]
+  },
+  {
     "id": "table",
     "fields": [
       {

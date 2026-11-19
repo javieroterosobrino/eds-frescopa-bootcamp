@@ -19,6 +19,7 @@
       "image",
       "quote",
       "search",
+      "stats",
       "tabs",
       "table",
       "text",
@@ -59,6 +60,12 @@
     "components": [
       "text",
       "image"
+    ]
+  },
+  {
+    "id": "stats",
+    "components": [
+      "stats-item"
     ]
   },
   {

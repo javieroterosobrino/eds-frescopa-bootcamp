@@ -3,8 +3,11 @@ import { exec } from "node:child_process";
 const run = (cmd) => new Promise((resolve, reject) => exec(
   cmd,
   (error, stdout, stderr) => {
-    if (error) reject();
-    if (stderr) reject(stderr);
+    if (error) {
+      reject(new Error(stderr || error.message));
+      return;
+    }
+    if (stderr) process.stderr.write(stderr);
     resolve(stdout);
   }
 ));
@@ -17,5 +20,5 @@ const modifledPartials = modifiedFiles.filter((file) => file.match(/^ue\/models\
 if (modifledPartials.length > 0) {
   const output = await run('npm run build:json --silent');
   console.log(output);
-  await run('git add .');
+  await run('git add component-definition.json component-filters.json component-models.json');
 }
